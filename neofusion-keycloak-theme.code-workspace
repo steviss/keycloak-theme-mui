@@ -2,6 +2,10 @@
   "folders": [
     {
       "name": "Neofusion Keycloak Theme",
+      "path": "./neofusion-keycloak-theme"
+    },
+    {
+      "name": "Project Root",
       "path": "./"
     }
   ],
