@@ -6,11 +6,15 @@
     "type": "git",
     "url": "https://github.com/steviss/neofusion-keycloak-theme"
   },
+  "engines": {
+    "node": ">=18.12.0 <19",
+    "yarn": ">=1.22.19"
+  },
   "scripts": {
     "postinstall": "copy-keycloak-resources-to-public",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build-keycloak-theme": "yarn build && keycloakify",
+    "build-theme": "yarn build && keycloakify",
     "storybook": "start-storybook -p 6006"
   },
   "keycloakify": {
