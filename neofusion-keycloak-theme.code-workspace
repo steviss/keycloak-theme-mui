@@ -1,0 +1,48 @@
+{
+  "folders": [
+    {
+      "name": "Neofusion Keycloak Theme",
+      "path": "./"
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint", //Linter (ESLint)
+      "tombonnike.vscode-status-bar-format-toggle", //Nice toggle feature
+      "donjayamanne.githistory", //For comparing files in GIT
+      "esbenp.prettier-vscode", // Prettier, code formatter
+      "redhat.vscode-yaml", //For Docker-Compose Yaml Files
+      "ms-azuretools.vscode-docker", //For Docker Containers and such, a really nice integration
+      "donjayamanne.githistory", //Helps with git, can compare files.
+      "orta.vscode-jest", //Jest for VScode
+      "dcortes92.freemarker", // Syntax Fremaker
+      "antonlilleby.xp-freemarker-formatter" //Formatter for FTL
+    ]
+  },
+  "settings": {
+    "eslint.validate": ["javascript", "html", "typescript"],
+    "eslint.workingDirectories": [],
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "files.eol": "\n",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "html.format.indentHandlebars": true,
+    "jest.autoRun": "off",
+    "jest.showCoverageOnLoad": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "**/node_modules": false
+    },
+    "[ftl]": {
+      "editor.defaultFormatter": "AntonLilleby.xp-freemarker-formatter"
+    }
+  }
+}
