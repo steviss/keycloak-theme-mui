@@ -7057,14 +7057,14 @@ evp_bytestokey@^1.0.0, evp_bytestokey@^1.0.3:
     md5.js "^1.3.4"
     safe-buffer "^5.1.1"
 
-evt@^2.4.15, evt@^2.4.18:
-  version "2.4.18"
-  resolved "https://registry.yarnpkg.com/evt/-/evt-2.4.18.tgz#931012610dcd3bc7c0877d61018a704e9e5511db"
-  integrity sha512-kMYW3DPrUWvFsOUf3cN1NMdg0MEFYLMLqC7hPSasNs8TOZCOBsDgazr6nXda2iUur/2L6BtRu0oCl2++oGYZxA==
+evt@^2.4.15, evt@^2.4.18, evt@^2.4.22:
+  version "2.4.22"
+  resolved "https://registry.yarnpkg.com/evt/-/evt-2.4.22.tgz#1a87471bca6e71909b66a9f8da86929bd34c8736"
+  integrity sha512-lxC4XLMhKXD2jj1p5O6AZ3tTFTIOt2qhD2NjX5phXPTfK/oIZhWUsZsqsdtrifxUOXf7PZ9TZF4PtylK/S5QGw==
   dependencies:
-    minimal-polyfills "^2.2.2"
-    run-exclusive "^2.2.18"
-    tsafe "^1.6.0"
+    minimal-polyfills "^2.2.3"
+    run-exclusive "^2.2.19"
+    tsafe "^1.6.4"
 
 exec-sh@^0.3.2:
   version "0.3.6"
@@ -9690,9 +9690,9 @@ jwt-decode@^3.1.2:
   integrity sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==
 
 keycloak-js@^21.0.1:
-  version "21.0.2"
-  resolved "https://registry.yarnpkg.com/keycloak-js/-/keycloak-js-21.0.2.tgz#1d3c2079d3c23850df4f253a868926861c51c488"
-  integrity sha512-i05i3VBPhQ867EgjA+OYPlf8YUPiUwtrU2zv4j8tvZIdRvhJY8f+mp1ZvRJl/GMRb+XhJs9BDknyBMrIspwDkw==
+  version "21.1.2"
+  resolved "https://registry.yarnpkg.com/keycloak-js/-/keycloak-js-21.1.2.tgz#949889848c024c2a585c177875e012f0163a1d6a"
+  integrity sha512-+6r1BvmutWGJBtibo7bcFbHWIlA7XoXRCwcA4vopeJh59Nv2Js0ju2u+t8AYth+C6Cg7/BNfO3eCTbsl/dTBHw==
   dependencies:
     base64-js "^1.5.1"
     js-sha256 "^0.9.0"
@@ -10329,10 +10329,10 @@ mini-css-extract-plugin@^2.4.5:
   dependencies:
     schema-utils "^4.0.0"
 
-minimal-polyfills@^2.2.1, minimal-polyfills@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/minimal-polyfills/-/minimal-polyfills-2.2.2.tgz#6b06a004acce420eb91cf94698f5e6e7f2518378"
-  integrity sha512-eEOUq/LH/DbLWihrxUP050Wi7H/N/I2dQT98Ep6SqOpmIbk4sXOI4wqalve66QoZa+6oljbZWU6I6T4dehQGmw==
+minimal-polyfills@^2.2.2, minimal-polyfills@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/minimal-polyfills/-/minimal-polyfills-2.2.3.tgz#22af58de16807b325f29b83ca38ffb83e75ec3f4"
+  integrity sha512-oxdmJ9cL+xV72h0xYxp4tP2d5/fTBpP45H8DIOn9pASuF8a3IYTf+25fMGDYGiWW+MFsuog6KD6nfmhZJQ+uUw==
 
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
@@ -11944,14 +11944,14 @@ postcss@^8.0.9, postcss@^8.2.15, postcss@^8.3.5, postcss@^8.4.19, postcss@^8.4.4
     source-map-js "^1.0.2"
 
 powerhooks@^0.26.8:
-  version "0.26.8"
-  resolved "https://registry.yarnpkg.com/powerhooks/-/powerhooks-0.26.8.tgz#fa93e6141e424c17c031a56f77fde1c75e128dbc"
-  integrity sha512-lXuxiZgAEtPP/FPRCLOncE2ibHrZH1UQ3RRYcWFIK4zd7Hbf54p4OjS8n3/6cKTf8BhbU0b1AUio1hEPWO10Gg==
+  version "0.26.16"
+  resolved "https://registry.yarnpkg.com/powerhooks/-/powerhooks-0.26.16.tgz#f39dac73dafd9ae995692536c320bd72ae8758bf"
+  integrity sha512-J505fYUL7hpe96rYsdUMj7Ju5qzBY6khvE5MWOSYTXj3emckCAZn1xV4OW+sF/inoRK5BSK3zkYROwKhAMCPWg==
   dependencies:
-    evt "^2.4.18"
+    evt "^2.4.22"
     memoizee "^0.4.15"
     resize-observer-polyfill "^1.5.1"
-    tsafe "^1.6.0"
+    tsafe "^1.6.4"
 
 prelude-ls@^1.2.1:
   version "1.2.1"
@@ -12886,12 +12886,12 @@ rsvp@^4.8.4:
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
   integrity sha512-nfMOlASu9OnRJo1mbEk2cz0D56a1MBNrJ7orjRZQG10XDyuvwksKbuXNp6qa+kbn839HwjwhBzhFmdsaEAfauA==
 
-run-exclusive@^2.2.18:
-  version "2.2.18"
-  resolved "https://registry.yarnpkg.com/run-exclusive/-/run-exclusive-2.2.18.tgz#ec930edc3a7044750dc827df9372bde8f610f586"
-  integrity sha512-TXr1Gkl1iEAOCCpBTRm/2m0+1KGjORcWpZZ+VGGTe7dYX8E4y8/fMvrHk0zf+kclec2R//tpvdBxgG0bDgaJfw==
+run-exclusive@^2.2.19:
+  version "2.2.19"
+  resolved "https://registry.yarnpkg.com/run-exclusive/-/run-exclusive-2.2.19.tgz#37a2fb6e3671f8ae0d63521ebd1865fc796cf307"
+  integrity sha512-K3mdoAi7tjJ/qT7Flj90L7QyPozwUaAG+CVhkdDje4HLKXUYC3N/Jzkau3flHVDLQVhiHBtcimVodMjN9egYbA==
   dependencies:
-    minimal-polyfills "^2.2.1"
+    minimal-polyfills "^2.2.3"
 
 run-parallel@^1.1.9:
   version "1.2.0"
@@ -14204,10 +14204,10 @@ ts-pnp@^1.1.6:
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha512-csd+vJOb/gkzvcCHgTGSChYpy5f1/XKNsmvBGO4JXS+z1v2HobugDz4s1IeFXM3wZB44uczs+eazB5Q/ccdhQw==
 
-tsafe@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.6.0.tgz#48a9bd0a4c43df43d289bdfc1d89f0d7fffbd612"
-  integrity sha512-wlUeRBnyN3EN2chXznpLm7vBEvJLEOziDU+MN6NRlD99AkwmXgtChNQhp+V97VyRa3Bp05IaL4Cocsc7JlyEUg==
+tsafe@^1.6.0, tsafe@^1.6.4:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.6.4.tgz#048a114761714538c72f16abd25bb247d4e3780e"
+  integrity sha512-l4Z54QFGHO8GF0gBpb3yPGHjkIkIirl8rwW+lMBmtEMzOJeRs8BdjkDEx6nU8Ak9PQVp/KNDtECxTja8MMIDoA==
 
 tsconfig-paths@^3.14.1:
   version "3.14.2"
@@ -14761,8 +14761,10 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
+    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
+    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"

@@ -33,7 +33,7 @@ export default function WebauthnAuthenticate(
     rpId,
   } = kcContext;
   const createTimeout = Number(kcContext.createTimeout);
-  const isUserIdentified = kcContext.isUserIdentified == "true";
+  const isUserIdentified = kcContext.isUserIdentified === "true";
 
   const formElementRef = useRef<HTMLFormElement>(null);
 
