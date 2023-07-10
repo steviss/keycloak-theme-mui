@@ -11,7 +11,7 @@
     "debug": "docker-compose up"
   },
   "author": "u/steviss",
-  "license": "Copyrighted",
+  "license": "UNLICENSED",
   "keywords": [],
   "engines": {
     "node": ">=18.12.0 <19",
