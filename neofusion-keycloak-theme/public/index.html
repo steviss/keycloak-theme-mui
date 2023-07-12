@@ -21,70 +21,89 @@
 
     <link
       rel="preload"
-      href="%PUBLIC_URL%/fonts/WorkSans/worksans-bold-webfont.woff2"
+      href="%PUBLIC_URL%/fonts/BwModelica/BwModelica-Light.otf"
       as="font"
       crossorigin="anonymous"
     />
     <link
       rel="preload"
-      href="%PUBLIC_URL%/fonts/WorkSans/worksans-medium-webfont.woff2"
+      href="%PUBLIC_URL%/fonts/BwModelica/BwModelica-Regular.otf"
       as="font"
       crossorigin="anonymous"
     />
     <link
       rel="preload"
-      href="%PUBLIC_URL%/fonts/WorkSans/worksans-regular-webfont.woff2"
+      href="%PUBLIC_URL%/fonts/BwModelica/BwModelica-Medium.otf"
       as="font"
       crossorigin="anonymous"
     />
     <link
       rel="preload"
-      href="%PUBLIC_URL%/fonts/WorkSans/worksans-semibold-webfont.woff2"
+      href="%PUBLIC_URL%/fonts/BwModelica/BwModelica-Bold.otf"
       as="font"
       crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="%PUBLIC_URL%/fonts/BwModelica/BwModelica-ExtraBold.otf"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="%PUBLIC_URL%/fonts/BwModelica/font.css"
     />
     <!-- SEE: https://docs.keycloakify.dev/limitations#self-hosted-fonts -->
     <style>
-      /* latin */
       @font-face {
-        font-family: "Work Sans";
+        font-family: "Bw Modelica";
         font-style: normal;
-        font-weight: normal;
-        /*400*/
+        font-weight: 300;
+        font-stretch: 100%;
         font-display: swap;
-        src: url("%PUBLIC_URL%/fonts/WorkSans/worksans-regular-webfont.woff2")
-          format("woff2");
+        src: url("%PUBLIC_URL%/fonts/BwModelica/BwModelica-Light.otf")
+          format("opentype");
       }
 
-      /* latin */
       @font-face {
-        font-family: "Work Sans";
+        font-family: "Bw Modelica";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url("%PUBLIC_URL%/fonts/BwModelica/BwModelica-Regular.otf")
+          format("opentype");
+      }
+
+      @font-face {
+        font-family: "Bw Modelica";
         font-style: normal;
         font-weight: 500;
+        font-stretch: 100%;
         font-display: swap;
-        src: url("%PUBLIC_URL%/fonts/WorkSans/worksans-medium-webfont.woff2")
-          format("woff2");
+        src: url("%PUBLIC_URL%/fonts/BwModelica/BwModelica-Medium.otf")
+          format("opentype");
       }
 
-      /* latin */
       @font-face {
-        font-family: "Work Sans";
+        font-family: "Bw Modelica";
         font-style: normal;
-        font-weight: 600;
+        font-weight: 700;
+        font-stretch: 100%;
         font-display: swap;
-        src: url("%PUBLIC_URL%/fonts/WorkSans/worksans-semibold-webfont.woff2")
-          format("woff2");
+        src: url("%PUBLIC_URL%/fonts/BwModelica/BwModelica-Bold.otf")
+          format("opentype");
       }
 
-      /* latin */
       @font-face {
-        font-family: "Work Sans";
+        font-family: "Bw Modelica";
         font-style: normal;
-        font-weight: bold;
-        /*700*/
+        font-weight: 800;
+        font-stretch: 100%;
         font-display: swap;
-        src: url("%PUBLIC_URL%/fonts/WorkSans/worksans-bold-webfont.woff2")
-          format("woff2");
+        src: url("%PUBLIC_URL%/fonts/BwModelica/BwModelica-ExtraBold.otf")
+          format("opentype");
       }
     </style>
   </head>

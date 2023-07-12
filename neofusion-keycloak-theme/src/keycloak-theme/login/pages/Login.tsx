@@ -5,7 +5,7 @@ import type { PageProps } from "keycloakify/login/pages/PageProps";
 import { useGetClassName } from "keycloakify/login/lib/useGetClassName";
 import type { KcContext } from "../kcContext";
 import type { I18n } from "../i18n";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 
 export default function Login(
   props: PageProps<Extract<KcContext, { pageId: "login.ftl" }>, I18n>
@@ -134,19 +134,13 @@ export default function Login(
                 })()}
               </div>
               <div className={getClassName("kcFormGroupClass")}>
-                <label
-                  htmlFor="password"
-                  className={getClassName("kcLabelClass")}
-                >
-                  {msg("password")}
-                </label>
-                <input
-                  tabIndex={2}
+                <TextField
+                  label={msg("password")}
                   id="password"
-                  className={getClassName("kcInputClass")}
                   name="password"
                   type="password"
                   autoComplete="off"
+                  variant="outlined"
                 />
               </div>
               <div
@@ -201,12 +195,6 @@ export default function Login(
                 />
                 <Button
                   tabIndex={4}
-                  className={clsx(
-                    getClassName("kcButtonClass"),
-                    getClassName("kcButtonPrimaryClass"),
-                    getClassName("kcButtonBlockClass"),
-                    getClassName("kcButtonLargeClass")
-                  )}
                   name="login"
                   id="kc-login"
                   type="submit"
@@ -251,13 +239,6 @@ export default function Login(
           </div>
         )}
       </div>
-      <Container maxWidth="sm">
-        <Box sx={{ my: 4 }}>
-          <Typography variant="h4" component="h1" gutterBottom>
-            Material UI Create React App example in TypeScript
-          </Typography>
-        </Box>
-      </Container>
     </Template>
   );
 }

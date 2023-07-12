@@ -1,15 +1,22 @@
+:root {
+  --primary-color: rgba(59, 131, 57, 1); /* #3b8339 RGBA */
+}
 .my-color {
   color: red;
 }
 
-.my-font {
-  font-family: "Work Sans";
+.bw-modelica-font {
+  font-family: "Bw Modelica";
 }
 
-.my-root-class {
+.neofusion-keycloak-theme {
   background: white;
 }
 
-.my-root-class body {
-  background: url(./assets/background.svg) no-repeat center center fixed;
+.neofusion-keycloak-theme body {
+  background: url(./assets/background.png),
+    linear-gradient(var(--primary-color), var(--primary-color));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: color-burn;
 }
