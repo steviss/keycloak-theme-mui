@@ -35,11 +35,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
   const { isReady } = usePrepareTemplate({
     doFetchDefaultThemeResources: doUseDefaultCss,
     url,
-    stylesCommon: [
-      "node_modules/patternfly/dist/css/patternfly.min.css",
-      "node_modules/patternfly/dist/css/patternfly-additions.min.css",
-      "lib/zocial/zocial.css",
-    ],
+    stylesCommon: ["lib/zocial/zocial.css"],
     styles: ["css/login.css"],
     htmlClassName: getClassName("kcHtmlClass"),
     bodyClassName: undefined,

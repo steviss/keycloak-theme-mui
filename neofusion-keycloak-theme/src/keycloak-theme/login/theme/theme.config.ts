@@ -23,10 +23,18 @@ export const THEME_CONFIG: ThemeOptions = {
           color: "#fff",
           fontSize: "16px",
           fontFamily: "BW Modelica",
+          fontStyle: "normal",
           fontWeight: 500,
-          lineHeight: "20px",
-          minWidth: "120px",
+          width: "100%",
           textTransform: "capitalize",
+          "& label": {
+            color: "#929292",
+            letterSpacing: "0.15px",
+          },
+          "& label.Mui-focused": {
+            color: "#929292",
+            backgroundColor: "white",
+          },
           "& .MuiInput-underline:after": {
             borderBottomColor: "#D9D9D9",
           },
@@ -51,18 +59,23 @@ export const THEME_CONFIG: ThemeOptions = {
       },
       styleOverrides: {
         root: {
+          minHeight: "42px",
+          padding: "0.5rem 1.37rem",
           color: "#fff",
-          fontSize: "16px",
+          fontSize: "0.75rem",
           fontFamily: "BW Modelica",
           fontWeight: 700,
-          lineHeight: "20px",
+          fontStyle: "normal",
           minWidth: "120px",
-          textTransform: "capitalize",
+          textTransform: "uppercase",
+          letterSpacing: "0.42px",
+          borderRadius: 4,
         },
       },
     },
   },
   typography: {
     fontFamily: "Bw Modelica",
+    fontSize: 16,
   },
 };
