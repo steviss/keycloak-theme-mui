@@ -1,6 +1,6 @@
 {
   "name": "neofusion-keycloak-theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Neofusion Keycloak Theme",
   "repository": {
     "type": "git",
@@ -19,6 +19,9 @@
     "build-storybook": "storybook build"
   },
   "keycloakify": {
+    "artifactId": "neofusion-keycloak-theme",
+    "theme-name": "neofusion-keycloak-theme",
+    "bundler": "none",
     "extraThemeProperties": [
       "foo=bar"
     ],
