@@ -93,6 +93,8 @@ Builds the theme and creates a folder `build_keycloak` with 2 versions of the th
 
 After the build cycle ends, you simply need to refresh your browser and you can view the modifications made.
 
+**Please note, that in order to see the changes in a production enviroment a restart is required (Keycloak needs to unpack the `.jar` file). Besides the fact, dev enviroment has special hooks enabled that disable caching.**
+
 ## Development cycle
 
 ### React Development
