@@ -5,6 +5,15 @@ import type { PageProps } from "keycloakify/login/pages/PageProps";
 import { useGetClassName } from "keycloakify/login/lib/useGetClassName";
 import type { KcContext } from "../kcContext";
 import type { I18n } from "../i18n";
+import {
+  Box,
+  Button,
+  Checkbox,
+  FormControlLabel,
+  Link,
+  Typography,
+} from "@mui/material";
+import { InputField } from "keycloak-theme/login/pages/components/atoms/InputField";
 
 export default function Login(
   props: PageProps<Extract<KcContext, { pageId: "login.ftl" }>, I18n>
@@ -46,45 +55,64 @@ export default function Login(
     formElement.submit();
   });
 
+  const label = !realm.loginWithEmailAllowed
+    ? "username"
+    : realm.registrationEmailAsUsername
+    ? "email"
+    : "usernameOrEmail";
+
+  const autoCompleteHelper: typeof label =
+    label === "usernameOrEmail" ? "username" : label;
+
+  const showNode =
+    realm.password && realm.registrationAllowed && !registrationDisabled;
+
   return (
     <Template
       {...{ kcContext, i18n, doUseDefaultCss, classes }}
       displayInfo={social.displayInfo}
       displayWide={realm.password && social.providers !== undefined}
       headerNode={msg("doLogIn")}
-      infoNode={
-        realm.password &&
-        realm.registrationAllowed &&
-        !registrationDisabled && (
-          <div id="kc-registration">
-            <span>
-              {msg("noAccount")}
-              <a tabIndex={6} href={url.registrationUrl}>
-                {msg("doRegister")}
-              </a>
-            </span>
-          </div>
-        )
-      }
     >
-      <div
-        id="kc-form"
-        className={clsx(
-          realm.password &&
-            social.providers !== undefined &&
-            getClassName("kcContentWrapperClass")
-        )}
-      >
-        <div
-          id="kc-form-wrapper"
-          className={clsx(
-            realm.password &&
-              social.providers && [
-                getClassName("kcFormSocialAccountContentClass"),
-                getClassName("kcFormSocialAccountClass"),
-              ]
+      <Box sx={{ maxWidth: 360, minHeight: 300 }} id="kc-form">
+        <div id="kc-form-wrapper">
+          {showNode && (
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: "1rem",
+                marginTop: "0.5rem",
+              }}
+              id="kc-registration"
+            >
+              <Typography
+                sx={{
+                  fontSize: "0.875rem",
+                  fontWeight: 400, //per Figma it should be 500, looked too thick in browser
+                  color: "#211F42",
+                }}
+                component="span"
+              >
+                {msg("dontHaveAnAccount")}{" "}
+                <Link
+                  sx={{
+                    color: "#51AF4E",
+                    textTransform: "uppercase",
+                    textDecoration: "none",
+                    fontWeight: 700,
+                    letterSpacing: "0.42px",
+                    fontSize: "0.875rem",
+                  }}
+                  tabIndex={6}
+                  href={url.registrationUrl}
+                >
+                  {msg("doSignUp")}
+                </Link>
+              </Typography>
+            </Box>
           )}
-        >
           {realm.password && (
             <form
               id="kc-form-login"
@@ -92,101 +120,97 @@ export default function Login(
               action={url.loginAction}
               method="post"
             >
-              <div className={getClassName("kcFormGroupClass")}>
-                {(() => {
-                  const label = !realm.loginWithEmailAllowed
-                    ? "username"
-                    : realm.registrationEmailAsUsername
-                    ? "email"
-                    : "usernameOrEmail";
-
-                  const autoCompleteHelper: typeof label =
-                    label === "usernameOrEmail" ? "username" : label;
-
-                  return (
-                    <>
-                      <label
-                        htmlFor={autoCompleteHelper}
-                        className={getClassName("kcLabelClass")}
-                      >
-                        {msg(label)}
-                      </label>
-                      <input
-                        tabIndex={1}
-                        id={autoCompleteHelper}
-                        className={getClassName("kcInputClass")}
-                        //NOTE: This is used by Google Chrome auto fill so we use it to tell
-                        //the browser how to pre fill the form but before submit we put it back
-                        //to username because it is what keycloak expects.
-                        name={autoCompleteHelper}
-                        defaultValue={login.username ?? ""}
-                        type="text"
-                        {...(usernameEditDisabled
-                          ? { disabled: true }
-                          : {
-                              autoFocus: true,
-                              autoComplete: "off",
-                            })}
-                      />
-                    </>
-                  );
-                })()}
-              </div>
-              <div className={getClassName("kcFormGroupClass")}>
-                <label
-                  htmlFor="password"
-                  className={getClassName("kcLabelClass")}
-                >
-                  {msg("password")}
-                </label>
-                <input
-                  tabIndex={2}
-                  id="password"
-                  className={getClassName("kcInputClass")}
-                  name="password"
-                  type="password"
-                  autoComplete="off"
-                />
-              </div>
-              <div
-                className={clsx(
-                  getClassName("kcFormGroupClass"),
-                  getClassName("kcFormSettingClass")
-                )}
+              <InputField
+                sx={{
+                  marginBottom: "1rem",
+                }}
+                label={msg(label)}
+                tabIndex={1}
+                id={autoCompleteHelper}
+                //NOTE: This is used by Google Chrome auto fill so we use it to tell
+                //the browser how to pre fill the form but before submit we put it back
+                //to username because it is what keycloak expects.
+                name={autoCompleteHelper}
+                defaultValue={login.username ?? ""}
+                type="text"
+                {...(usernameEditDisabled
+                  ? { disabled: true }
+                  : {
+                      autoFocus: true,
+                      autoComplete: "off",
+                    })}
+              />
+              <InputField
+                sx={{
+                  marginBottom: "1rem",
+                }}
+                label={msg("password")}
+                id="password"
+                name="password"
+                type="password"
+                autoComplete="off"
+              />
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  marginBottom: "1.5rem",
+                }}
               >
-                <div id="kc-form-options">
-                  {realm.rememberMe && !usernameEditDisabled && (
-                    <div className="checkbox">
-                      <label>
-                        <input
-                          tabIndex={3}
-                          id="rememberMe"
-                          name="rememberMe"
-                          type="checkbox"
-                          {...(login.rememberMe
-                            ? {
-                                checked: true,
-                              }
-                            : {})}
+                {realm.rememberMe && !usernameEditDisabled && (
+                  <Box sx={{ marginBottom: "0.5rem" }}>
+                    <FormControlLabel
+                      sx={{
+                        color: "#929292",
+                        "&.Mui-checked": {
+                          color: "#211F42",
+                        },
+                      }}
+                      tabIndex={3}
+                      id="rememberMe"
+                      name="rememberMe"
+                      {...(login.rememberMe && {
+                        checked: true,
+                      })}
+                      control={
+                        <Checkbox
+                          sx={{
+                            color: "#929292",
+                            "&.Mui-checked": {
+                              color: "#51AF4E",
+                              "& + .MuiTypography-root": {
+                                color: "#211F42",
+                              },
+                            },
+                          }}
                         />
-                        {msg("rememberMe")}
-                      </label>
-                    </div>
-                  )}
-                </div>
-                <div className={getClassName("kcFormOptionsWrapperClass")}>
-                  {realm.resetPasswordAllowed && (
-                    <span>
-                      <a tabIndex={5} href={url.loginResetCredentialsUrl}>
-                        {msg("doForgotPassword")}
-                      </a>
-                    </span>
-                  )}
-                </div>
-              </div>
-              <div
-                id="kc-form-buttons"
-                className={getClassName("kcFormGroupClass")}
+                      }
+                      label={msg("rememberMe")}
+                    />
+                  </Box>
+                )}
+                {realm.resetPasswordAllowed && (
+                  <Link
+                    sx={{
+                      fontSize: "0.875rem",
+                      lineHeight: "24px",
+                      letterSpacing: "0.15px",
+                      fontWeight: 500, //per Figma it should be 600, looked too thick in browser
+                      textDecoration: "none",
+                    }}
+                    tabIndex={5}
+                    href={url.loginResetCredentialsUrl}
+                  >
+                    {msg("doForgotPassword")}
+                  </Link>
+                )}
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
               >
                 <input
                   type="hidden"
@@ -198,21 +222,16 @@ export default function Login(
                       }
                     : {})}
                 />
-                <input
+                <Button
                   tabIndex={4}
-                  className={clsx(
-                    getClassName("kcButtonClass"),
-                    getClassName("kcButtonPrimaryClass"),
-                    getClassName("kcButtonBlockClass"),
-                    getClassName("kcButtonLargeClass")
-                  )}
                   name="login"
                   id="kc-login"
                   type="submit"
-                  value={msgStr("doLogIn")}
                   disabled={isLoginButtonDisabled}
-                />
-              </div>
+                >
+                  {msgStr("doContinue")}
+                </Button>
+              </Box>
             </form>
           )}
         </div>
@@ -224,6 +243,8 @@ export default function Login(
               getClassName("kcFormSocialAccountClass")
             )}
           >
+            {/* https://www.figma.com/file/K9A98FzxECw7urVqhdPwwB/Trading-Platform-Working?mode=dev */}
+            {/* https://www.figma.com/file/K9A98FzxECw7urVqhdPwwB/Trading-Platform-Working?type=design&node-id=159-63927&mode=design&t=THlTrRRxLZ6XSW7F-0 */}
             <ul
               className={clsx(
                 getClassName("kcFormSocialAccountListClass"),
@@ -248,7 +269,7 @@ export default function Login(
             </ul>
           </div>
         )}
-      </div>
+      </Box>
     </Template>
   );
 }

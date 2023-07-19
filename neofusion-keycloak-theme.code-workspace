@@ -12,13 +12,8 @@
   "extensions": {
     "recommendations": [
       "dbaeumer.vscode-eslint", //Linter (ESLint)
-      "tombonnike.vscode-status-bar-format-toggle", //Nice toggle feature
-      "donjayamanne.githistory", //For comparing files in GIT
       "esbenp.prettier-vscode", // Prettier, code formatter
       "redhat.vscode-yaml", //For Docker-Compose Yaml Files
-      "ms-azuretools.vscode-docker", //For Docker Containers and such, a really nice integration
-      "donjayamanne.githistory", //Helps with git, can compare files.
-      "orta.vscode-jest", //Jest for VScode
       "dcortes92.freemarker", // Syntax Fremaker
       "antonlilleby.xp-freemarker-formatter" //Formatter for FTL
     ]
