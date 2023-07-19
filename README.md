@@ -57,14 +57,14 @@ Go under the `Themes` tab and set `neofusion-keycloak-theme` under:
 - Email theme
 
 Your `Theme` settings should look like this:
-![](https://lh6.googleusercontent.com/eTTuTF9E164uorU9F_et-Y7aS7cyznWI-a9XeQ3JgHMMlEZWUMHXsU23ThrcjM7pvDTGc1JkKkzoq-hCiDRFeLZe_5P-vygwc7U15xh9zR44A3MG2wsljTWJu3eNKFXucDfjGN1gb97u2t94_4Log0g)
+![](./docs//keycloak_theme_settings.png)
 
 ## E-mail test enviroment
 
 Please visit the url [Ethereal.mail](https://ethereal.email/).
 
 Click on `Create Ethereal Account`, you will be able to view a page like this:
-![](https://lh5.googleusercontent.com/l-cECCQjA2Ae1Y5rmpAV6dmTr0bgrdUz6vJW5KCMkCvL5hSOK0YMhFrWhhjTevBpF_5WXzBzsv_KSgF5V7U3EX85aHGw3OJ4jeXfgtrUdt6in3bUKfSYy9OY7n2WOJ3HVN-Lf-KpPDflY0fDGoS_dqo)
+![](./docs/ethereal_after_creating_an_account.png)
 After creating the e-mail with Ethereal we will use the variables to setup a fake Inbox for sending and recieving e-mail with `Keycloak` so we can see what we are developing.
 
 Go under `Realm Settings` and
@@ -73,7 +73,7 @@ Go under `Realm Settings` and
 
 **Please keep in mind that there is a bunch of configuration up top, under Template. But you only need to fill in the From field (use e-mail provided by Ethereal.mail).**
 
-![](https://lh4.googleusercontent.com/2iqKcqao_X34x7Bbck-JtBVJCOeYDD3VN8K3_dd-DltTvnuCemMRP0NMg6hx92KF6Kr8BwapO_VGVlZ9Tn6RQnX-UFh8t28-qh7S7Qv2LgYHWd2GK2PEdg81-Ob6USth_NUySY8t88Lkrgp0KmczYFM)_Your configuration should look something like this._
+![](./docs/keycloak_email_settings.png)_Your configuration should look something like this._
 
 Click Save and you are ready to test emails.
 
