@@ -18,7 +18,7 @@ For this project it is required to have at least:
 
 ## Enviromental variables
 
-Please visit the `.env.example` file in the root directory and fix it according to your needs.
+Please visit the `.env.example` file and make an `.env` file copy, in the root directory and fix it according to your needs.
 
 _Variables are only used by the `docker-compose.yml` file._
 
@@ -41,7 +41,7 @@ There are also variaty of extensions added, here is a complete list:
 - Run `yarn` in the `neofusion-keycloak-theme` folder
 - Run `yarn develop` in the root folder to create the nescessary Docker instances (in case you need a PG Admin instance as well instead of `yarn develop` run `yarn debug`)
 - After running the mentioned commands, please go inside of the `neofusion-keycloak-theme` folder and run `yarn build-theme` (this process might take up to `3 minutes` - takes `90 seconds` after the initial build)
--
+- Please follow the steps under `Assing your theme` (if you are working on the React Theme) and `E-mail test enviroment` (if you are working on custom e-mails). Afterwards, visit the `Development enviroment` and `Development cylce` in order to understand what to do next.
 
 ## Assign your theme
 
