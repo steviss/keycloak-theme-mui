@@ -104,5 +104,7 @@ export const { kcContext } = getKcContext({
 });
 
 export type KcContext = NonNullable<
-  ReturnType<typeof getKcContext>["kcContext"]
+  ReturnType<typeof getKcContext>["kcContext"] & {
+    properties?: { displayLogo?: string };
+  }
 >;

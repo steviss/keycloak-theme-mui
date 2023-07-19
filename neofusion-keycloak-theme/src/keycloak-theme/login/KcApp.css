@@ -6,7 +6,7 @@
 }
 
 .bw-modelica-font {
-  font-family: "Bw Modelica";
+  font-family: "Bw Modelica", sans-serif;
 }
 
 .neofusion-keycloak-theme {
@@ -19,4 +19,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: color-burn;
+}
+
+#root,
+#storybook-root {
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Bw Modelica", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
 }

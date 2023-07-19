@@ -10,6 +10,19 @@ export const THEME_CONFIG: ThemeOptions = {
     },
   },
   components: {
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecoration: "none",
+          color: "#929292",
+          transition: "color 0.4s ease-in-out",
+          ":hover": {
+            textDecoration: "underline",
+            color: "#211F42",
+          },
+        },
+      },
+    },
     MuiCssBaseline: {
       styleOverrides: {
         body: {
@@ -21,13 +34,18 @@ export const THEME_CONFIG: ThemeOptions = {
       styleOverrides: {
         root: {
           color: "#fff",
-          fontSize: "16px",
           fontFamily: "BW Modelica",
           fontStyle: "normal",
           fontWeight: 500,
           width: "100%",
           textTransform: "capitalize",
+          "& .MuiInputBase-input": {
+            fontSize: "0.875rem",
+            fontWeight: 500, //Should be 600 per Figma
+            letterSpacing: "0.15px",
+          },
           "& label": {
+            fontSize: "0.875rem",
             color: "#929292",
             letterSpacing: "0.15px",
           },

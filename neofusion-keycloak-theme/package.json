@@ -23,7 +23,7 @@
     "theme-name": "neofusion-keycloak-theme",
     "bundler": "none",
     "extraThemeProperties": [
-      "foo=bar"
+      "displayLogo=false"
     ],
     "extraThemeNames": [
       "neofusion-keycloak-theme-1"
