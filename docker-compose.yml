@@ -30,8 +30,8 @@ services:
     image: quay.io/keycloak/keycloak:latest
     container_name: "${APP_NAME}-Keycloak"
     volumes:
-      - ./neofusion-keycloak-theme/build_keycloak/src/main/resources/theme/neofusion-keycloak-theme:/opt/keycloak/themes/neofusion-keycloak-theme
-      - ./neofusion-keycloak-theme/build_keycloak/src/main/resources/theme/neofusion-keycloak-theme-1:/opt/keycloak/themes/keycloakify-poc-theme
+      - ./keycloak-mui-theme/build_keycloak/src/main/resources/theme/keycloak-mui-theme:/opt/keycloak/themes/keycloak-mui-theme
+      - ./keycloak-mui-theme/build_keycloak/src/main/resources/theme/keycloak-mui-theme-1:/opt/keycloak/themes/keycloakify-poc-theme
     environment:
       DB_VENDOR: POSTGRES
       DB_ADDR: postgres

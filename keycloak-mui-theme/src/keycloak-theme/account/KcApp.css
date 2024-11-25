@@ -1,9 +1,9 @@
 /* 
 If you use global CSS like we do here(not recommended) 
 Be mindful that the CSS of the login theme may clash with the CSS of the account theme in Storybook (and only in storybook).
-This is why I made sure to use .neofusion-keycloak-theme-account instead of .neofusion-keycloak-theme that is already used in the login theme.
+This is why I made sure to use .mui-keycloak-theme-account instead of .mui-keycloak-theme that is already used in the login theme.
 */
 
-.neofusion-keycloak-theme-account {
+.mui-keycloak-theme-account {
   background: url(./assets/background.png) no-repeat center center fixed;
 }

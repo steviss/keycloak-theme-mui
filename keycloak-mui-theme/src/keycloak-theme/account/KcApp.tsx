@@ -12,7 +12,7 @@ const MyExtraPage2 = lazy(() => import("./pages/MyExtraPage2"));
 const Fallback = lazy(() => import("keycloakify/account"));
 
 const classes: PageProps<any, any>["classes"] = {
-  kcBodyClass: "neofusion-keycloak-theme-account",
+  kcBodyClass: "mui-keycloak-theme-account",
 };
 
 export default function KcApp(props: { kcContext: KcContext }) {

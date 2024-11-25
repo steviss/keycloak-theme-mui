@@ -1,10 +1,10 @@
 {
-  "name": "neofusion-keycloak-theme",
+  "name": "keycloak-mui-theme",
   "version": "0.0.1",
-  "description": "Neofusion Keycloak Theme",
+  "description": "MUI Keycloak Theme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/steviss/neofusion-keycloak-theme"
+    "url": "https://github.com/steviss/keycloak-mui-theme"
   },
   "scripts": {
     "develop": "docker-compose up keycloak-postgres keycloak",

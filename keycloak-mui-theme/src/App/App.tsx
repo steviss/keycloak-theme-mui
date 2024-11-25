@@ -13,7 +13,7 @@ import { addParamToUrl } from "powerhooks/tools/urlSearchParams";
 //On newer version you must remove it (e.g: http://localhost:8080 )
 const keycloakUrl = "http://localhost:9999";
 const keycloakRealm = "master";
-const keycloakClient = "neofusion-theme-client";
+const keycloakClient = "mui-theme-client";
 
 const { OidcClientProvider } = createOidcClientProvider({
   url: keycloakUrl,

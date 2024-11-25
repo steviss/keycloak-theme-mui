@@ -1,8 +1,8 @@
 {
   "folders": [
     {
-      "name": "Neofusion Keycloak Theme",
-      "path": "./neofusion-keycloak-theme"
+      "name": "Keycloak Theme MUI",
+      "path": "./keycloak-mui-theme"
     },
     {
       "name": "Project Root",

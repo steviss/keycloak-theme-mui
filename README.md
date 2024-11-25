@@ -24,7 +24,7 @@ _Variables are only used by the `docker-compose.yml` file._
 
 ## Extensions
 
-Please visit the `neofusion-keycloak-theme.code-workspace` file to see settings regarding the project.
+Please visit the `keycloak-mui-theme.code-workspace` file to see settings regarding the project.
 
 In order to modify FTL (freemaker template language) files, we are using a custom Syntax and Formatter for said files. This is automatically set up for you, if you are using VSCode.
 
@@ -38,9 +38,9 @@ There are also variaty of extensions added, here is a complete list:
 
 ## Commands
 
-- Run `yarn` in the `neofusion-keycloak-theme` folder
+- Run `yarn` in the `keycloak-mui-theme` folder
 - Run `yarn develop` in the root folder to create the nescessary Docker instances (in case you need a PG Admin instance as well instead of `yarn develop` run `yarn debug`)
-- After running the mentioned commands, please go inside of the `neofusion-keycloak-theme` folder and run `yarn build-theme` (this process might take up to `3 minutes` - takes `90 seconds` after the initial build)
+- After running the mentioned commands, please go inside of the `keycloak-mui-theme` folder and run `yarn build-theme` (this process might take up to `3 minutes` - takes `90 seconds` after the initial build)
 - Please follow the steps under `Assing your theme` (if you are working on the React Theme) and `E-mail test enviroment` (if you are working on custom e-mails). Afterwards, visit the `Development enviroment` and `Development cylce` in order to understand what to do next.
 
 ## Assign your theme
@@ -49,7 +49,7 @@ Login using your adming credentials, you can find your `username` and `password`
 
 After logging in, please visit the `Realm Settings` page.
 
-Go under the `Themes` tab and set `neofusion-keycloak-theme` under:
+Go under the `Themes` tab and set `keycloak-mui-theme` under:
 
 - Login theme
 - Account theme
@@ -83,7 +83,7 @@ Click Save and you are ready to test emails.
 
 `yarn storybook`
 
-The makers of `Keycloakify` imagined that a suitable enviroment for development would be Storybook. I've updated all the dependencies to latest version and in order to develop a theme, without waiting on the `build-theme` cycle you can run `yarn storybook` (in the `neofusion-keycloak-theme` folder).
+The makers of `Keycloakify` imagined that a suitable enviroment for development would be Storybook. I've updated all the dependencies to latest version and in order to develop a theme, without waiting on the `build-theme` cycle you can run `yarn storybook` (in the `keycloak-mui-theme` folder).
 
 Storybook will run on `6006` port.
 

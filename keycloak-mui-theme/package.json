@@ -1,10 +1,10 @@
 {
-  "name": "neofusion-keycloak-theme",
+  "name": "keycloak-mui-theme",
   "version": "0.0.2",
-  "description": "Neofusion Keycloak Theme",
+  "description": "MUI Keycloak Theme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/steviss/neofusion-keycloak-theme"
+    "url": "https://github.com/steviss/keycloak-mui-theme"
   },
   "engines": {
     "node": ">=18.12.0 <19",
@@ -19,14 +19,14 @@
     "build-storybook": "storybook build"
   },
   "keycloakify": {
-    "artifactId": "neofusion-keycloak-theme",
-    "theme-name": "neofusion-keycloak-theme",
+    "artifactId": "keycloak-mui-theme",
+    "theme-name": "keycloak-mui-theme",
     "bundler": "none",
     "extraThemeProperties": [
       "displayLogo=false"
     ],
     "extraThemeNames": [
-      "neofusion-keycloak-theme-1"
+      "keycloak-mui-theme-1"
     ]
   },
   "author": "u/steviss",

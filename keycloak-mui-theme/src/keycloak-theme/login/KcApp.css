@@ -9,11 +9,11 @@
   font-family: "Bw Modelica", sans-serif;
 }
 
-.neofusion-keycloak-theme {
+.mui-keycloak-theme {
   background: white;
 }
 
-.neofusion-keycloak-theme body {
+.mui-keycloak-theme body {
   background: url(./assets/background.png),
     linear-gradient(var(--primary-color), var(--primary-color));
   background-repeat: no-repeat;

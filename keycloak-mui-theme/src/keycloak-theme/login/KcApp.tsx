@@ -29,7 +29,7 @@ const Info = lazy(() => import("keycloakify/login/pages/Info"));
 // https://github.com/keycloak/keycloak/blob/11.0.3/themes/src/main/resources/theme/keycloak/login/theme.properties
 const classes: PageProps<any, any>["classes"] = {
   // NOTE: The classes are defined in ./KcApp.css
-  kcHtmlClass: "neofusion-keycloak-theme",
+  kcHtmlClass: "mui-keycloak-theme",
   kcHeaderWrapperClass: "my-color bw-modelica-font",
 };
 
